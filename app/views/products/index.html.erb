@@ -20,6 +20,7 @@
         <li class="breadcrumb-item">
           <a class="btn btn-primary btn-sm mr-2" href="<%= logout_path %>" role="button" data-method="delete">Logout</a>
           <a class="btn btn-primary btn-sm mr-2" href="/users/<%= current_user.id %>" role="button">Go to Dashboard</a>
+          <a class="btn btn-primary btn-sm mr-2" href="/products/newtest" role="button">E Store</a>
         </li>
         <h4>Hello
           <%= current_user.full_name %>
@@ -43,52 +44,56 @@
                   <thead>
                     <tr>
                       <th>Product</th>
+                      <th>Image</th>
                       <th>Seller</th>
                       <th>Date Posted</th>
                       <th>Amount</th>
                     </tr>
                   </thead>
-                      <tbody>
-                        <% if @products %>
-                          <% @products.each do |product| %>
-                            <tr>
-                              <td>
-                                <%= product.product %>
-                              </td>
-                              <td>
-                                <%= product.user.full_name %>
-                              </td>
-                              <td>
-                                <%= product.created_at.strftime('%m/%d/%Y') %>
-                              </td>
-                              <td>
-                                <%= number_to_currency(product.amount) %>
-                              </td>
-                              <td>
-                                <form action="/products/<%= product.id %>" method="post">
-                                  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
-                                  <input type="hidden" name="_method" value="patch">
-                                  <input class="btn btn-primary btn-sm mr-2" type="submit" name="buy" value="Buy">
-                                </form>
-                              </td>
-                              <% end %>
-                                <% end %>
-                      </tbody>
-                    </table>
-                  </div>
-
-
+                  <tbody>
+                    <% if @products %>
+                      <% @products.each do |product| %>
+                        <tr>
+                          <td>
+                            <%= product.product %>
+                          </td>
+                          <td>
+                              <img src="/assets/<%= product.image %>.jpg" height="30">
+                          </td>
+                          <td>
+                            <%= product.user.full_name %>
+                          </td>
+                          <td>
+                            <%= product.created_at.strftime('%m/%d/%Y') %>
+                          </td>
+                          <td>
+                            <%= number_to_currency(product.amount) %>
+                          </td>
+                          <td>
+                            <form action="/products/<%= product.id %>" method="post">
+                              <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+                              <input type="hidden" name="_method" value="patch">
+                              <input class="btn btn-primary btn-sm mr-2" type="submit" name="buy" value="Buy">
+                            </form>
+                          </td>
+                          <% end %>
+                            <% end %>
+                  </tbody>
+                </table>
               </div>
-              <!--close container-->
 
-              <!-- Optional JavaScript -->
-              <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-              <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-                crossorigin="anonymous"></script>
-              <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-                crossorigin="anonymous"></script>
-              <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
-                crossorigin="anonymous"></script>
+
+            </div>
+            <!--close container-->
+
+            <!-- Optional JavaScript -->
+            <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+            <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+              crossorigin="anonymous"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+              crossorigin="anonymous"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+              crossorigin="anonymous"></script>
 </body>
 
 </html>

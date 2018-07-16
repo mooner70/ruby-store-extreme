@@ -42,6 +42,7 @@
                   <thead>
                     <tr>
                       <th>Product</th>
+                      <th>Image</th>
                       <th>Date Posted</th>
                       <th>Amount</th>
                       <th>Action</th>
@@ -53,6 +54,9 @@
                         <tr>
                           <td>
                             <%= product.product %>
+                          </td>
+                          <td>
+                              <img src="/assets/<%= product.image %>.jpg" height="30">
                           </td>
                           <td>
                             <%= product.date.strftime('%m/%d/%Y') %>
@@ -106,6 +110,7 @@
                   <thead>
                     <tr>
                       <th>Product</th>
+                      <th>Image</th>
                       <th>Date Bought</th>
                       <th>Buyer</th>
                       <th>Amount</th>
@@ -117,6 +122,9 @@
                         <tr>
                           <td>
                             <%= sold.product %>
+                          </td>
+                          <td>
+                              <img src="/assets/<%= sold.image %>.jpg" height="30">
                           </td>
                           <td>
                             <%= sold.date %>
@@ -151,6 +159,7 @@
                   <thead>
                     <tr>
                       <th>Product</th>
+                      <th>Image</th>
                       <th>Date Bought</th>
                       <th>Seller</th>
                       <th>Amount</th>
@@ -162,6 +171,9 @@
                         <tr>
                           <td>
                             <%= purchase.product %>
+                          </td>
+                          <td>
+                              <img src="/assets/<%= purchase.image %>.jpg" height="30">
                           </td>
                           <td>
                             <%= purchase.date %>

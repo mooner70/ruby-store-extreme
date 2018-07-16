@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   get 'login' => 'sessions#create', as: 'new_login'
   post 'login' => 'sessions#new', as: 'login'
   delete 'logout' => 'sessions#destroy', as: 'logout'
+  get 'products/newtest' => 'products#newtest', as: 'newtest'
   
   resources :users
   resources :products

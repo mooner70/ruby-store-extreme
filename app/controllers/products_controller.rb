@@ -19,7 +19,9 @@ class ProductsController < ApplicationController
     # end
   end
 
-  def show
+  def newtest
+    @products = Product.where.not(user_id:current_user).where(buyer_id:0)
+    render '/products/index1'
   end
 
   def destroy
