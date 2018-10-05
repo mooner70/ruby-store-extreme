@@ -1,0 +1,16 @@
+current directory: /Users/andymoon/Desktop/CodingDojo/DojoAssignments/Ruby/first_vagrant_box/Rails2/shoe_sale_extreme/vendor/bundle/ruby/2.2.0/gems/binding_of_caller-0.8.0/ext/binding_of_caller
+/Users/andymoon/.rvm/rubies/ruby-2.2.2/bin/ruby -r ./siteconf20181004-13693-l4c7hj.rb extconf.rb
+
+current directory: /Users/andymoon/Desktop/CodingDojo/DojoAssignments/Ruby/first_vagrant_box/Rails2/shoe_sale_extreme/vendor/bundle/ruby/2.2.0/gems/binding_of_caller-0.8.0/ext/binding_of_caller
+make "DESTDIR=" clean
+make: *** No rule to make target `clean'.  Stop.
+
+current directory: /Users/andymoon/Desktop/CodingDojo/DojoAssignments/Ruby/first_vagrant_box/Rails2/shoe_sale_extreme/vendor/bundle/ruby/2.2.0/gems/binding_of_caller-0.8.0/ext/binding_of_caller
+make "DESTDIR="
+echo "Nada."
+Nada.
+
+current directory: /Users/andymoon/Desktop/CodingDojo/DojoAssignments/Ruby/first_vagrant_box/Rails2/shoe_sale_extreme/vendor/bundle/ruby/2.2.0/gems/binding_of_caller-0.8.0/ext/binding_of_caller
+make "DESTDIR=" install
+echo "Nada."
+Nada.

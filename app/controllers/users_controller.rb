@@ -14,7 +14,7 @@ class UsersController < ApplicationController
   def create
     if new_user.valid?
       session[:user_id] = new_user.id
-    return redirect_to "/users/#{@user.id}"
+    return redirect_to "/users/#{user.id}"
     end
     redirect_to :back, alert: new_user.errors.full_messages
   end

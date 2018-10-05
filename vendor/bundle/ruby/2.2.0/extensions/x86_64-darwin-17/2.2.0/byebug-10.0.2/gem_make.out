@@ -1,0 +1,19 @@
+current directory: /Users/andymoon/Desktop/CodingDojo/DojoAssignments/Ruby/first_vagrant_box/Rails2/shoe_sale_extreme/vendor/bundle/ruby/2.2.0/gems/byebug-10.0.2/ext/byebug
+/Users/andymoon/.rvm/rubies/ruby-2.2.2/bin/ruby -r ./siteconf20181004-13693-13w1sfe.rb extconf.rb
+creating Makefile
+
+current directory: /Users/andymoon/Desktop/CodingDojo/DojoAssignments/Ruby/first_vagrant_box/Rails2/shoe_sale_extreme/vendor/bundle/ruby/2.2.0/gems/byebug-10.0.2/ext/byebug
+make "DESTDIR=" clean
+
+current directory: /Users/andymoon/Desktop/CodingDojo/DojoAssignments/Ruby/first_vagrant_box/Rails2/shoe_sale_extreme/vendor/bundle/ruby/2.2.0/gems/byebug-10.0.2/ext/byebug
+make "DESTDIR="
+compiling locker.c
+compiling byebug.c
+compiling context.c
+compiling breakpoint.c
+compiling threads.c
+linking shared-object byebug/byebug.bundle
+
+current directory: /Users/andymoon/Desktop/CodingDojo/DojoAssignments/Ruby/first_vagrant_box/Rails2/shoe_sale_extreme/vendor/bundle/ruby/2.2.0/gems/byebug-10.0.2/ext/byebug
+make "DESTDIR=" install
+/usr/local/opt/coreutils/bin/ginstall -c -m 0755 byebug.bundle ./.gem.20181004-13693-17vljru/byebug
